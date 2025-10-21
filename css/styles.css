@@ -1,0 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;                  
+  font-style: normal;               
+  font-size: 2.5rem;                 
+}
+
+a{
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-style: 1 rem;
+}
+
+video.background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
