@@ -3,6 +3,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  overflow: hidden;
+  overflow-y: auto;
+}
 
 h2 {
   font-family: 'Oswald', sans-serif;
@@ -17,11 +27,89 @@ a{
   font-style: 1 rem;
 }
 
-video.background {
-  position: relative;
+/* VIDEO HERO */
+
+.video-hero {
+  display: relative;
   width: 100%;
-  height: 100vh;
+  height: 900px;
   overflow: hidden;
 }
 
+.video-hero video {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+  transform: translateX(-50%);
+  z-index: 0;
+  filter: brightness(70%) blur(1px);
+}
+
+.video-hero .contenido {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+}
+
+/* MENÚ */
+/* menu sticky a la derecha */
+#menu {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  /* height: 80px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  padding: 15px 20px;
+  z-index: 2;
+}
+
+#menu ul {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s, background-color 0.3s; 
+  
+}
+
+#menu ul li a:hover {
+  color: rgb(165, 245, 87);
+
+}
+
+/* LOGO */
+
+#menu .logo img{
+  height: 50px;
+  cursor: pointer;
+  margin-left: 0;
+}
+
+#menu ul {
+  display: flex;
+  gap: 20px;
+  list-style:none;
+  margin: 0;
+  padding: 0;
+}
+
+#cuenta-atrás
 
