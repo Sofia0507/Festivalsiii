@@ -111,5 +111,87 @@ a{
   padding: 0;
 }
 
+/* VENTA ENTRADAS */
+#tipos-de-entradas form {
+  max-width: 728px;
+  min-height: fit-content;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  font-family:var(--font-family);
+  border: #000000 1px solid;
+}
 
 
+#tipos-de-entradas form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: var(--input-margin);
+  gap: 2rem;
+}
+
+#tipos-de-entradas form label {
+  font-size: 1.4rem;
+  width: 80%;
+  min-width: 5rem;
+  margin: var(--input-margin);
+  color: var(--primary-color);
+}
+
+#tipos-de-entradas form input[type="number"] {
+  font-size: 1.4rem;
+  width: 20%;
+  min-width: 3rem;
+  color: var(--primary-color);
+  padding: var(--input-padding);
+  margin: var(--input-margin);
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+}
+
+#tipos-de-entradas form input[type="number"]:focus {
+  outline: none;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  box-shadow: 0 0 5px var(--secondary-color);
+}
+
+#tipos-de-entradas form .total-price-cont {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0 0 0;
+}
+
+#tipos-de-entradas form #buyPass.disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+#tipos-de-entradas form .total-price-cont p {
+  color: var(--accent-color);
+}
+
+#tipos-de-entradas form input[type="submit"] {
+  padding: var(--input-padding);
+  margin: var(--input-margin);
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 0.2rem;
+  border: white 1px solid;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+#tipos-de-entradas form input[type="submit"]:hover {
+  background-color: white;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}

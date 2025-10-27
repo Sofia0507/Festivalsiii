@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Rocanrola</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="img/favicon.png" rel="icon" type="image/png">
+    <script src="https://kit.fontawesome.com/c3fd22b8e3.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+   <header>
+       <nav id="menu">
+            <!-- logo menú -->
+            <a href="index.html" class="logo">
+                <img src="img/Marca-Rocanrola-2025.webp" alt="logo rocanrola">
+
+            </a>
+            <ul>
+                <li>
+                  <a href="cantanteshorarios.html">Cantantes confirmados y Horarios</a>
+                </li>
+                <li>
+                  <a href="galeria.html">Galería</a>
+                </li>
+                <li>
+                  <a href="ventaentradas.html">Venta entradas</a>
+                </li>
+                <li>
+                  <a href="#dondenosencontramos">¿Donde nos encontramos?</a>
+                </li>
+                <li>
+                 <a href="#siguenos">Síguenos en nuestras redes sociales!</a>
+                </li>
+          </ul>
+        </nav>
+    </header>
+
+
+
+    <!-- VENTA ENTRADAS -->
+    <h2> TIPOS DE ENTRADAS</h2>
+    <main>
+        <section id="tipos-de-entradas">
+            <form action="">
+                <div>
+                    <label for="abono-general">ABONO GENERAL</label>
+                    <input
+                    type="number"
+                    name="abono-general"
+                    id="abono-general"
+                    min="cant"
+                    value="0"
+                    data-price="50" />
+                </div>
+                <div>
+                    <label for="abono-front">ABONO FRONT STAGE</label>
+                    <input
+                    type="number"
+                    name="abono-front"
+                    id="abono-front"
+                    min="0"
+                    value="0"
+                    data-price="100" />
+                </div>
+                 <div>
+                    <label for="abono-vip">ABONO VIP (+18)</label>
+                    <input
+                    type="number"
+                    name="abono-vip"
+                    id="abono-vip"
+                    min="0"
+                    value="0"
+                    data-price="150" />
+                </div>
+                 <div class="total-management-expenses">
+                    <p> Gastos de gestón:</p>
+                    <p id="managementExpenses"></p>
+                </div>
+                <div class="total-price-cont">
+                    <p> Total:</p>
+                    <p id="totalPrice"></p>
+                </div>
+                <input id="buyPass" type="submit" value="Continuar" class="disabled"/>
+            </form>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
