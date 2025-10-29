@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth
 }
 
 body{
@@ -30,10 +31,11 @@ a{
 /* VIDEO HERO */
 
 .video-hero {
-  display: relative;
+  position:relative;
   width: 100%;
   height: 900px;
   overflow: hidden;
+  z-index: 0;
 }
 
 .video-hero video {
@@ -194,4 +196,248 @@ a{
   background-color: white;
   color: var(--secondary-color);
   border: 1px solid var(--secondary-color);
+}
+
+
+/* CUENTA ATRAS */
+
+#cuenta-atrás{
+  text-align: center;
+  padding: 60px 20px;
+  background: #111;
+  color: rgb(165, 245, 87);
+  font-family:'Oswald',sans-serif;
+}
+
+#cuenta-atrás h1 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  color: seashell;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin:20px;
+}
+
+.countdown div {
+  background: #222;
+  border-radius:15px;
+  padding: 20px 30px;
+  transition: transform 0.3s ease;
+}
+
+.number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  display: block;
+}
+
+.label {
+  font-size: 1rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+/* carrousel homepage */
+#carrousel {
+  background: rgb(165, 245, 87);
+  padding: 60px 0;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+#carrousel h2 {
+  color: rgb(0, 0, 0);
+  font-size: 3rem;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.carrousel-container {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carrousel-track {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.carrousel-item {
+  flex: 0 0 auto;
+  width: 380px;
+  height: 260px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.carrousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.carrousel-item img:hover {
+  transform: scale(1.05);
+}
+
+.carrousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0.5rem 1.2rem;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+/* flecha izq */
+.carrousel-button.prev {
+  left: 25px;
+}
+
+/* flecha drcha */
+.carrousel-button.next {
+  right: 25px;
+}
+
+.carrousel-button:hover {
+  background: #111;
+}
+
+
+.ver-mas {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 28px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(165, 245, 87);
+  /* color: #fff; */
+  text-decoration: none;
+  border-radius: 10px;
+  border-bottom: 2px solid #000000;
+  transition: color 0.3s, border-color 0.3s;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+
+.ver-mas:hover {
+  color: #111;
+  border-color:  rgb(50, 50, 50);
+}
+
+/* FOOTER */
+/* MAPA */
+
+#dondenosencontramos {
+  background-color: #000000;
+  width: 100%;
+  min-height: 800px;
+  margin: 0 auto;
+  padding: 80px  20px;
+  text-align: center;
+}
+
+#dondenosencontramos h2 {
+  margin-bottom: 90px;
+  font-size:3rem;
+  color: rgb(165, 245, 87);
+}
+
+.ubicacion-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items:flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.map-container {
+  flex: 3;
+  min-width: 300px;
+  height: 450px;
+}
+
+/* Info al lado */
+.info-container {
+  flex: 1;
+  /* background: #f7f7f7; */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  color: #ffffff;
+  margin-top: 60px;
+}
+
+.info-container h3 {
+  font-family:'Oswald', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-size:30px;
+}
+
+.info-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-container li {
+ margin-bottom: 20px;
+ line-height: 1.4;
+ font-family: monstserrat,sans-serif;
+}
+
+/* COLABORADORES */
+#colaboradores {
+  background-color: rgb(165, 245, 87);
+  padding:60px 0px;
+  text-align: center;
+  font-family:Oswald,sans-serif;
+}
+
+.colaboradores-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  max-width: 100%;
+  margin: 1;
+  padding-left: 22px;
+  padding-right: 15px;
+  
+}
+
+.colaboradores-container img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin: 5px;
+  display: block;
+  border-radius: 8px;
+
 }
