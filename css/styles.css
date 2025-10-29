@@ -7,7 +7,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth
 }
 
 body{
@@ -197,6 +196,8 @@ a{
   color: var(--secondary-color);
   border: 1px solid var(--secondary-color);
 }
+
+
 
 
 /* CUENTA ATRAS */
