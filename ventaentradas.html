@@ -23,7 +23,7 @@
             </a>
             <ul>
                 <li>
-                  <a href="cantanteshorarios.html">Cantantes confirmados y Horarios</a>
+                  <a href="cantanteshorarios.html">Cantantes confirmados y horarios</a>
                 </li>
                 <li>
                   <a href="galeria.html">Galería</a>
@@ -38,13 +38,22 @@
 
 
     <!-- VENTA ENTRADAS -->
-     <h2>TIPOS DE ENTRADAS</h2>
-
+    
+    <section><h2>TIPOS DE ENTRADAS</h2> </section>
     <main>
         <section id="tipos-de-entradas">
             <form id="form">
-                <div>
-                    <label for="abono-general">ABONO GENERAL</label>
+                <div class="ticket-item">
+                   <div class="ticket-text">
+                      <label for="abono-general">  🎟️ ABONO GENERAL</label>
+                      <p class="ticket-info">Acceso los tres días al Rocanrola 
+                        2026+ vaso conmemorativo.Menores de 16 deben ir 
+                        acompañados y con autorización firmada por padres</p>
+                        <p class="ticket-info">
+                         Acceso al recinto desde las 16:00 hasta cierre
+                        </p>
+                    </div>
+
                     <input
                         type="number"
                         name="abono-general"
@@ -54,8 +63,8 @@
                         data-price="50" />
                 </div>
 
-                <div>
-                    <label for="abono-front">ABONO FRONT STAGE</label>
+                <div class="ticket-item">
+                    <label for="abono-front"> 🎟️ ABONO FRONT STAGE</label>
                     <input
                         type="number"
                         name="abono-front"
@@ -65,8 +74,8 @@
                         data-price="100" />
                 </div>
 
-                <div>
-                    <label for="abono-vip">ABONO VIP (+18)</label>
+                <div class="ticket-item">
+                    <label for="abono-vip"> 🎟️ ABONO VIP (+18)</label>
                     <input
                         type="number"
                         name="abono-vip"
