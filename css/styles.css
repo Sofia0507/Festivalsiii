@@ -125,7 +125,7 @@ a{
 #tipos-de-entradas form {
   width: 100%;
   max-width: 720px;
-  background-color: #ffffff;
+  background-color: rgb(165, 245, 87);
   border-radius: 10px;
   box-shadow:0,0,10px,rgba(0,0,0,0.1);
   padding: 2rem;
@@ -135,14 +135,14 @@ a{
 #tipos-de-entradas p {
   margin-bottom: 1rem;
   font-size: 0.70rem;
-  color: #333;
+  color: #000000;
   font-family: "Montserrat",sans-serif;
   text-align: left;
 }
 
 
 #tipos-de-entradas form div:not(.total-price-cont):not(.total-management-expenses) {
-  background-color: #fafafa;
+  background-color: #000000;
   border-radius: 10px;
   padding: 1.5rem;
   margin-bottom: 5rem;
@@ -155,15 +155,16 @@ a{
 #tipos-de-entradas form label {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #111;
+  color:rgb(165, 245, 87);
   width: auto;
   font-family: "Montserrat",sans-serif;
 }
 
-#section h2 {
+#tipos-de-entradas h2 {
   text-align: center;
   width: 100%;
-  display: block;
+  font-size: 3rem;
+  margin-bottom: 2rem;
 }
 
 #tipos-de-entradas form input[type="number"] {
@@ -171,7 +172,7 @@ a{
   font-size: 1.1rem;
   text-align: center;
   border-radius: 6px;
-  border: 1px solid #aaa;
+  border: 1px solid #000000;
   padding: 0.4rem;
   transition: all 0.2s ease;
 }
@@ -223,7 +224,6 @@ a{
 
 .ticket-item {
  background-color: #fafafa;
- border: 1px solid #ddd;
  border-radius: 10px;
  padding: 1.5rem;
  margin-bottom: 2rem;
@@ -245,16 +245,9 @@ a{
   margin-top: 0.4rem;
   font-size: 0.75rem;
   line-height: 1.4;
-  color: #333;
-  font-family: "Montserrat", sans-serif;
+  color: #bbbbbb;
+  font-family: "Montserrat";
 }
-
-
-
-
-
-
-
 
 
 

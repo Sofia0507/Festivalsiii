@@ -39,20 +39,23 @@
 
     <!-- VENTA ENTRADAS -->
     
-    <section><h2>TIPOS DE ENTRADAS</h2> </section>
+    <section id="tipos-de-entradas">
+       <h2>TIPOS DE ENTRADAS</h2> 
+    </section>
     <main>
         <section id="tipos-de-entradas">
             <form id="form">
                 <div class="ticket-item">
-                   <div class="ticket-text">
-                      <label for="abono-general">  🎟️ ABONO GENERAL</label>
-                      <p class="ticket-info">Acceso los tres días al Rocanrola 
-                        2026+ vaso conmemorativo.Menores de 16 deben ir 
-                        acompañados y con autorización firmada por padres</p>
-                        <p class="ticket-info">
-                         Acceso al recinto desde las 16:00 hasta cierre
-                        </p>
-                    </div>
+                    <label for="abono-general">
+                        🎟️ ABONO GENERAL
+                        <span class="ticket-info">
+                            Acceso los tres días al Rocanrola 2026 + vaso conmemorativo.
+                            Menores de 16 deben ir acompañados y con autorización firmada por padres
+                        </span>
+                        <span class="ticket-info">
+                            Acceso al recinto desde las 16:00 hasta cierre
+                        </span>
+                    </label>
 
                     <input
                         type="number"
@@ -64,18 +67,40 @@
                 </div>
 
                 <div class="ticket-item">
-                    <label for="abono-front"> 🎟️ ABONO FRONT STAGE</label>
+                    <label for="abono-front">
+                        🎟️ ABONO FRONT
+                        <span class="ticket-info">
+                            Acceso los tres días al Rocanrola 2026 + Acceso al Front Stage+ 
+                            vaso conmemorativo.Menores de 16 deben ir acompañados y con autorización firmada por padres
+                        </span>
+                        <span class="ticket-info">
+                            Acceso al recinto desde las 16:00 hasta cierre
+                        </span>
+                    </label>
+                    
                     <input
                         type="number"
-                        name="abono-front"
-                        id="abono-front"
+                        name="abono-general"
+                        id="abono-general"
                         min="0"
                         value="0"
-                        data-price="100" />
+                        data-price="50" />
                 </div>
 
                 <div class="ticket-item">
-                    <label for="abono-vip"> 🎟️ ABONO VIP (+18)</label>
+                    <label for="abono-vip">
+                        🎟️ ABONO VIP (+18)
+                        <span class="ticket-info">
+                            Acceso los tres días al Rocanrola 2026, tarima VIP elevada +
+                            Acceso al Front Stage+ 10 aguas+12 consumiciones+ vaso conmemorativo 
+                            + Pack Merchandising.Entrada para mayores de 18 años.
+                            
+                        </span>
+                        <span class="ticket-info">
+                            Acceso al recinto desde las 16:00 hasta cierre
+                        </span>
+                    </label>
+                    
                     <input
                         type="number"
                         name="abono-vip"
