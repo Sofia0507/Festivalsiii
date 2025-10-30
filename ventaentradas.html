@@ -31,12 +31,6 @@
                 <li>
                   <a href="ventaentradas.html">Venta abonos</a>
                 </li>
-                <li>
-                  <a href="#dondenosencontramos">¿Donde nos encontramos?</a>
-                </li>
-                <li>
-                 <a href="#siguenos">Síguenos en nuestras redes sociales!</a>
-                </li>
           </ul>
         </nav>
     </header>
@@ -44,53 +38,60 @@
 
 
     <!-- VENTA ENTRADAS -->
-    <h2> TIPOS DE ENTRADAS</h2>
+     <h2>TIPOS DE ENTRADAS</h2>
+
     <main>
         <section id="tipos-de-entradas">
-            <form action="">
+            <form id="form">
                 <div>
                     <label for="abono-general">ABONO GENERAL</label>
                     <input
-                    type="number"
-                    name="abono-general"
-                    id="abono-general"
-                    min="cant"
-                    value="0"
-                    data-price="50" />
+                        type="number"
+                        name="abono-general"
+                        id="abono-general"
+                        min="0"
+                        value="0"
+                        data-price="50" />
                 </div>
+
                 <div>
                     <label for="abono-front">ABONO FRONT STAGE</label>
                     <input
-                    type="number"
-                    name="abono-front"
-                    id="abono-front"
-                    min="0"
-                    value="0"
-                    data-price="100" />
+                        type="number"
+                        name="abono-front"
+                        id="abono-front"
+                        min="0"
+                        value="0"
+                        data-price="100" />
                 </div>
-                 <div>
+
+                <div>
                     <label for="abono-vip">ABONO VIP (+18)</label>
                     <input
-                    type="number"
-                    name="abono-vip"
-                    id="abono-vip"
-                    min="0"
-                    value="0"
-                    data-price="150" />
+                        type="number"
+                        name="abono-vip"
+                        id="abono-vip"
+                        min="0"
+                        value="0"
+                        data-price="150" />
                 </div>
-                 <div class="total-management-expenses">
-                    <p> Gastos de gestón:</p>
-                    <p id="managementExpenses"></p>
+
+                <div class="total-management-expenses">
+                    <p>Gastos de gestión:</p>
+                    <p id="managementExpenses">0 €</p>
                 </div>
+
                 <div class="total-price-cont">
-                    <p> Total:</p>
-                    <p id="totalPrice"></p>
+                    <p>Total:</p>
+                    <p id="totalPrice">0 €</p>
                 </div>
-                <input id="buyPass" type="submit" value="Continuar" class="disabled"/>
+
+                <input id="buyPass" type="submit" value="Continuar" class="disabled" />
             </form>
         </section>
     </main>
+
+    
     <script src="js/script.js"></script>
 </body>
 </html>
-
