@@ -136,8 +136,8 @@ a{
   margin-bottom: 1rem;
   font-size: 0.70rem;
   color: #333;
-  display: flex;
-  flex-direction: column;
+  font-family: "Montserrat",sans-serif;
+  text-align: left;
 }
 
 
@@ -158,11 +158,6 @@ a{
   color: #111;
   width: auto;
   font-family: "Montserrat",sans-serif;
-}
-
-#tipos-de-entradas p {
-  font-family: "Montserrat",sans-serif;
-  text-align: l;
 }
 
 #section h2 {
@@ -235,32 +230,27 @@ a{
  display: flex;
  justify-content: space-between;
  align-items: flex-start;
-
+  gap: 1.5rem;
 }
 
-.ticket-text {
+.ticket-item label {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex: 1;
-}
-
-.ticket-text label {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #111;
-  margin-bottom: 0.5rem;
-  text-align: left;
-  display: block;
 }
 
 .ticket-info {
-  margin-bottom: 0.3rem;
+  display: block;
+  margin-top: 0.4rem;
   font-size: 0.75rem;
-  line-height: 1.2;
-  align-items: left;
-  
+  line-height: 1.4;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
 }
+
+
+
 
 
 
