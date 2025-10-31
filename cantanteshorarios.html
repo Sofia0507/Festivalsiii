@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
+  <head>
     <title>Rocanrola</title>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
@@ -10,42 +10,346 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
     <link href="img/favicon.png" rel="icon" type="image/png">
     <script src="https://kit.fontawesome.com/c3fd22b8e3.js" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
+  </head>
+  <body>
    <header>
-       <nav id="menu">
-            <!-- logo menú -->
-            <a href="index.html" class="logo">
-                <img src="img/Marca-Rocanrola-2025.webp" alt="logo rocanrola">
+      <nav id="menu">
+       <!-- logo menú -->
+        <a href="index.html" class="logo">
+          <img src="img/Marca-Rocanrola-2025.webp" alt="logo rocanrola">
 
-            </a>
-            <ul>
-                <li>
-                  <a href="cantanteshorarios.html">Cantantes confirmados y Horarios</a>
-                </li>
-                <li>
-                  <a href="galeria.html">Galería</a>
-                </li>
-                <li>
-                  <a href="ventaentradas.html">Venta abonos</a>
-                </li>
-          </ul>
-       </nav>
-     </header>
+        </a>
+        <ul>
+          <li>
+            <a href="cantanteshorarios.html">Cantantes confirmados y Horarios</a>
+            </li>
+            <li>
+              <a href="galeria.html">Galería</a>
+            </li>
+            <li>
+              <a href="ventaentradas.html">Venta abonos</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="lineup">
+      <h2>Artistas confirmados</h2>
+      <div class="lineup-grid">
 
-    <section id="fondo">
-      <div class="fondo-contenedor">
-       <img src="img/fondo.gif" alt="fondo-verde">
-       <img src="img/CRruz_cafune.webp" alt="Cruz-cafune">
+     <!-- Tarjeta Cruz Cafuné -->
+     <div class="artista-card" onclick="abrirModal('img/cartel-cruz.webp')">
+        <img src="img/CRruz_cafune.webp" alt="Cruz Cafuné">
+        <div class="artista-info">
+          <h3>Cruz Cafuné</h3>
+          <p>Trap · Soul · Canarias</p>
+        </div>
       </div>
-    </section>
 
-    <!-- <div class="fotos-cantantes">
-      <img src="img/CRruz_cafune.webp" alt="Cruz-cafune">
-    </div> -->
+      <!-- Tarjeta ZENIT -->
+      <div class="artista-card" onclick="abrirModal('mg/ZENIT.webp')">
+        <img src="img/ZENIT.webp" alt="ZENIT">
+        <div class="artista-info">
+          <h3>ZENIT</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta YEICOXTONI -->
+      <div class="artista-card" onclick="abrirModal('img/cartel-YeicoxToni.webp')">
+        <img src="img/YEICOXTONI.webp" alt="YeicoxToni">
+        <div class="artista-info">
+          <h3>YeicoxToni</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta Hard gz -->
+      <div class="artista-card" onclick="abrirModal('img/hARD.webp')">
+        <img src="img/hARD.webp" alt="Hard gz">
+        <div class="artista-info">
+          <h3>Hard gz</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta Tremendo y griffiti -->
+      <div class="artista-card" onclick="abrirModal('img/tremendoygriffi')">
+        <img src="img/TREMENDO-Y-GRIFFI.webp" alt="Hard gz">
+        <div class="artista-info">
+          <h3>Tremendo y Griffi</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta Santa Salut -->
+      <div class="artista-card" onclick="abrirModal('img/SANTA-SALUT.webp')">
+        <img src="img/SANTA-SALUT.webp" alt="SANTA-SALUT">
+        <div class="artista-info">
+          <h3>SANTA SALUT</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta iSRAEL B -->
+      <div class="artista-card" onclick="abrirModal('img/ISRAE-LB.webp')">
+        <img src="img/ISRAE-LB.webp" alt="ISRAE-LB">
+        <div class="artista-info">
+          <h3>Israel B</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta HOKE -->
+      <div class="artista-card" onclick="abrirModal('img/HOKE.webp')">
+        <img src="img/HOKE.webp" alt="HOKE">
+        <div class="artista-info">
+          <h3>Hoke</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta Eazyboi -->
+      <div class="artista-card" onclick="abrirModal('img/EAZYBOI.webp')">
+        <img src="img/EAZYBOI.webp" alt="EAZYBOI">
+        <div class="artista-info">
+          <h3>Eazyboi</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta Alsafir -->
+      <div class="artista-card" onclick="abrirModal('img/Alsafir.webp')">
+        <img src="img/AL SAFIR.webp" alt="Alsafir">
+        <div class="artista-info">
+          <h3>Alsafir</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta Arce -->
+      <div class="artista-card" onclick="abrirModal('img/ARCE.webp')">
+        <img src="img/ARCE.webp" alt="Hard gz">
+        <div class="artista-info">
+          <h3>ARCE</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta lANGUI -->
+      <div class="artista-card" onclick="abrirModal('img/COSTALANGUI.webp')">
+        <img src="img/COSTALANGUI.webp" alt="Hard gz">
+        <div class="artista-info">
+          <h3>Costa Langui</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta Zetazen -->
+      <div class="artista-card" onclick="abrirModal('img/ZETAZEN_11zon.webp')">
+        <img src="img/ZETAZEN_11zon.webp" alt="ZETAZEN_11zon">
+        <div class="artista-info">
+          <h3>Zetazen</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta Trapani -->
+      <div class="artista-card" onclick="abrirModal('img/TRAPANI-_11zon.webp')">
+        <img src="img/TRAPANI-_11zon.webp" alt="TRAPANI-_11zon">
+        <div class="artista-info">
+          <h3>Trapani</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta Toteking -->
+      <div class="artista-card" onclick="abrirModal('img/TOTEKING_11zon.webp')">
+        <img src="img/TOTEKING_11zon.webp" alt="Toteking">
+        <div class="artista-info">
+          <h3>Toteking</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+     <!-- Tarjeta Swit Eme-->
+      <div class="artista-card" onclick="abrirModal('img/SWIT EME_11zon.webp')">
+        <img src="img/SWIT EME_11zon.webp" alt="Eme">
+        <div class="artista-info">
+          <h3>Swit Eme</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+     <!-- Tarjeta ShodaMOnk -->
+      <div class="artista-card" onclick="abrirModal('img/ShodaMOnkAS.webp')">
+        <img src="img/SHODA MONKAS_11zon.webp" alt="ShodaMOnkAS">
+        <div class="artista-info">
+          <h3>Soda Monkas</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- TarjetaSho Hai -->
+      <div class="artista-card" onclick="abrirModal('img/SHO-HAI_11zon.webp')">
+        <img src="img/SHO-HAI_11zon.webp" alt="SHO-HAI">
+        <div class="artista-info">
+          <h3>Sho Hai</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta Sharif -->
+      <div class="artista-card" onclick="abrirModal('img/SHARIF_11zon.webp')">
+        <img src="img/SHARIF_11zon.webp" alt="SAFIR">
+        <div class="artista-info">
+          <h3>Sharif</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta Recycled -->
+      <div class="artista-card" onclick="abrirModal('img/RECYCLEDJ.webp')">
+        <img src="img/RECYCLEDJ.webp" alt="Recycled">
+        <div class="artista-info">
+          <h3>Recycled </h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta Reality -->
+      <div class="artista-card" onclick="abrirModal('img/REALITY.webp')">
+        <img src="img/REALITY.webp" alt="REALITY">
+        <div class="artista-info">
+          <h3>Reality</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+     <!-- Tarjeta Nikone -->
+      <div class="artista-card" onclick="abrirModal('img/NIKONE.webp')">
+        <img src="img/NIKONE.webp" alt="Nikone">
+        <div class="artista-info">
+          <h3>Nikone</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta Nadal015 -->
+      <div class="artista-card" onclick="abrirModal('img/NADAL015.webp')">
+        <img src="img/NADAL015.webp" alt="Nadal015">
+        <div class="artista-info">
+          <h3>Nadal015</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta NACH -->
+      <div class="artista-card" onclick="abrirModal('img/NACH.webp')">
+        <img src="img/NACH.webp" alt="Nach">
+        <div class="artista-info">
+          <h3>Nach</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta Morodo -->
+      <div class="artista-card" onclick="abrirModal('img/MORODO.webp')">
+        <img src="img/MORODO.webp" alt="Morodo">
+        <div class="artista-info">
+          <h3>Morodo</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+     <!-- Tarjeta Miranda -->
+      <div class="artista-card" onclick="abrirModal('img/MIRANDA.webp')">
+        <img src="img/MIRANDA.webp" alt="MIRANDA">
+        <div class="artista-info">
+          <h3>Miranda</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta Midas Alonso -->
+      <div class="artista-card" onclick="abrirModal('img/MIDAS ALONSO.webp')">
+        <img src="img/MIDAS ALONSO.webp" alt="Midas alonso">
+          <h3>Hard gz</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta matasvandals -->
+      <div class="artista-card" onclick="abrirModal('img/MATASVANDALS.webp')">
+        <img src="img/MATASVANDALS.webp" alt="matasvandals">
+        <div class="artista-info">
+          <h3>MATASVANDALS</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta LASNYNASDELCORO -->
+      <div class="artista-card" onclick="abrirModal('img/LASNYNASDELCORO.webp')">
+        <img src="img/LASNYNASDELCORO.webp" alt="Hard gz">
+        <div class="artista-info">
+          <h3>LASNYNASDELCORO</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta L0RNA-->
+      <div class="artista-card" onclick="abrirModal('img/L0RNA.webp')">
+        <img src="img/L0RNA.webp" alt="Hard gz">
+        <div class="artista-info">
+          <h3>L0rna</h3>
+          <p>Rap · Electrónica · Madrid</p>
+        </div>
+      </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <!-- Modal -->
+      <div id="modal" class="modal">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <img id="modal-img" class="modal-contenido" alt="Cartel ampliado">
+      </div>
+   </section>
+
+
+    
+
+    
+
+<script src="js/script.js"></script>
 </body>
 </html>

@@ -397,6 +397,133 @@ a{
   border-color:  rgb(50, 50, 50);
 }
 
+/* GALERIA */
+
+#galeria {
+  background-color: #1e1e1e;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+
+.galeria {
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.galeria img {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  break-inside: avoid;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+}
+
+
+
+/* cantantes confirmados y horarios */
+#lineup {
+  background-color: #111;
+  padding: 60px 20px;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+#lineup h2 {
+  color: #f9c94c;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.lineup-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.artista-card {
+  background-color: #1e1e1e;
+  border: 2px solid #f9c94c;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+}
+
+.artista-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255,255,255,0.3);
+}
+
+.artista-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.artista-info {
+  padding: 15px;
+  color: #fff;
+}
+
+.artista-info h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #f9c94c;
+}
+
+.artista-info p {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.cerrar {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #f9c94c;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.cerrar:hover {
+  color: #fff;
+}
+
+
+
 /* FOOTER */
 /* MAPA */
 
@@ -465,33 +592,161 @@ a{
 /* COLABORADORES */
 #colaboradores {
   background-color: rgb(165, 245, 87);
-  padding:60px 0px;
+  padding:40px 20px;
   text-align: center;
   font-family:Oswald,sans-serif;
 }
+#colaboradores h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #000;
+  text-align: left;
+  margin-left: 20px;
+}
 
-.colaboradores-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+#colaboradores p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.colaboradores {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 8 logos por fila */
+  gap: 30px;
+  justify-items: center;
   align-items: center;
-  gap: 0;
-  max-width: 100%;
-  margin: 1;
-  padding-left: 22px;
-  padding-right: 15px;
-  
 }
 
-.colaboradores-container img {
+.colaboradores img {
   width: 100px;
-  height: 100px;
-  object-fit: cover;
-  margin: 5px;
-  display: block;
-  border-radius: 8px;
-
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.2));
 }
+
+.colaboradores img :hover {
+ transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .colaboradores {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .colaboradores img {
+    width: 80px;
+  }
+}
+
+/* REDES SOCIALES */
+.redes-sociales{
+  background-color: #141414; 
+  text-align: center;
+  padding: 30px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.redes-sociales h2 {
+  color: #f5f0e6;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.red-social {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #f5f0e6;
+  font-size: 24px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 3px solid rgb(165, 245, 87);
+  filter: drop-shadow(0 0 2px rgb(165, 245, 87));
+  box-shadow: inset 0 0 5px rgb(165, 245, 87);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.red-social::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  opacity: 0.3;
+  transform: rotate(10deg);
+}
+
+.red-social:hover {
+  background-color: #f5f0e6;
+  color: #3b2c1a;
+  box-shadow: 0 0 10px #f5f0e6;
+}
+
+footer {
+  background-color: #111;
+  color: #f9c94c;
+  padding: 40px 20px;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-info p,
+.footer-info a {
+  margin: 5px 0;
+  color: #f9c94c;
+  font-size: 1rem;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #f9c94c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-social a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: #f9c94c;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #fff;
+}
+
+.footer-legal a {
+  margin: 0 5px;
+  font-size: 0.9rem;
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  color: #f9c94c;
+}
+
+
 
 /* CANTANTES Y HORARIOS */
 .fondo-contenedor {

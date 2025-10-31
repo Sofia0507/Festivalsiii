@@ -1,4 +1,5 @@
 
+
 // CUENTA ATRAS HOME PAGE
 
 const festivalDate =new Date ("March 2026 17:00:00");
@@ -35,6 +36,60 @@ function actualizarCuentaAtras(){
 // Actualizar asi cada segundo
 const intervalo = setInterval(actualizarCuentaAtras, 1000);
 actualizarCuentaAtras();
+
+
+// CARRUSEL HOME PAGE
+const track = document.querySelector('.carrousel-track');
+const prevButton = document.querySelector('.carrousel-button.prev');
+const nextButton = document.querySelector('.carrousel-button.next');
+const items = document.querySelectorAll('.carrousel-item');
+
+let currentIndex = 0;
+const itemWidth = items[0].offsetWidth + 20; 
+const visibleItems = Math.floor(document.querySelector('.carrousel-container').offsetWidth / itemWidth);
+const maxIndex = items.length - visibleItems;
+
+function updateCarousel() {
+  track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+}
+
+prevButton.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateCarousel();
+  }
+});
+
+nextButton.addEventListener('click', () => {
+  if (currentIndex < maxIndex) {
+    currentIndex++;
+    updateCarousel();
+  }
+});
+
+window.addEventListener('resize', () => {
+  updateCarousel();
+});
+
+// CANTANTES
+
+document.addEventListener('DOMContentLoaded', function () {
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+
+  window.abrirModal = function (imagenSrc) {
+    if (modal && modalImg) {
+      modal.style.display = 'flex';
+      modalImg.src = imagenSrc;
+    }
+  };
+
+  window.cerrarModal = function () {
+    if (modal) {
+      modal.style.display = 'none';
+    }
+  };
+});
 
 // VENTA ENTRADAS
 document.addEventListener("DOMContentLoaded", function () {
@@ -89,3 +144,5 @@ document.addEventListener("DOMContentLoaded", function () {
     // Calcular total al iniciar
     calculateTotalPrice();
 });
+
+console.log("Script cargado correctamente");
