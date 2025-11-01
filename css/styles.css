@@ -429,14 +429,19 @@ a{
 
 /* cantantes confirmados y horarios */
 #lineup {
-  background-color: #111;
+  min-height: calc(80vh - 3em);
+  background: url("../img/fondografitero.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   padding: 60px 20px;
   font-family: 'Oswald', sans-serif;
   text-align: center;
 }
 
 #lineup h2 {
-  color: #f9c94c;
+  color: rgb(165, 245, 87);
   font-size: 2.8rem;
   margin-bottom: 40px;
   letter-spacing: 2px;
@@ -451,7 +456,9 @@ a{
 
 .artista-card {
   background-color: #1e1e1e;
-  border: 2px solid #f9c94c;
+  border: 3px solid rgb(165, 245, 87);
+  filter: drop-shadow(0 0 2px rgb(165, 245, 87));
+  box-shadow: inset 0 0 5px rgb(165, 245, 87);
   border-radius: 15px;
   overflow: hidden;
   width: 250px;
@@ -478,7 +485,7 @@ a{
 .artista-info h3 {
   margin: 0;
   font-size: 1.4rem;
-  color: #f9c94c;
+  color: rgb(165, 245, 87);
 }
 
 .artista-info p {
@@ -521,6 +528,11 @@ a{
 .cerrar:hover {
   color: #fff;
 }
+
+
+
+  
+
 
 
 
@@ -693,7 +705,7 @@ a{
 
 footer {
   background-color: #111;
-  color: #f9c94c;
+  color: rgb(165, 245, 87);
   padding: 40px 20px;
   font-family: 'Oswald', sans-serif;
   text-align: center;
@@ -709,13 +721,13 @@ footer {
 .footer-info p,
 .footer-info a {
   margin: 5px 0;
-  color: #f9c94c;
+  color: rgb(165, 245, 87);
   font-size: 1rem;
 }
 
 .footer-links a {
   margin: 0 10px;
-  color: #f9c94c;
+  color: rgb(165, 245, 87);
   text-decoration: none;
   font-weight: bold;
 }
@@ -727,7 +739,7 @@ footer {
 .footer-social a {
   margin: 0 10px;
   font-size: 1.5rem;
-  color: #f9c94c;
+  color: rgb(165, 245, 87);
   transition: color 0.3s ease;
 }
 
@@ -762,10 +774,10 @@ footer {
 
 .Cruz-cafune {
   position: absolute;
-  top: 20%; /* ajusta según lo que necesites */
+  top: 20%; 
   left: 50%;
   transform: translateX(-50%);
-  width: 300px; /* ajusta el tamaño según tu diseño */
+  width: 300px; 
   z-index: 2;
 }
 
