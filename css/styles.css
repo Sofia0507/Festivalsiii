@@ -3,6 +3,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -13,7 +15,7 @@
 body{
   overflow: hidden;
   overflow-y: auto;
-  background: url('../img/PARED.webp'); 
+  background: url('../img/fondocantantes.webp'); 
   background-size: cover;
   background-position: center;
   background-attachment: fixed; 
@@ -36,6 +38,14 @@ a{
 
 /* VIDEO HERO */
 
+.video-hero .contenido {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: left; /* alinea todo el texto a la izquierda */
+}
 .video-hero {
   position:relative;
   width: 100%;
@@ -53,99 +63,138 @@ a{
   object-fit: cover;
   transform: translateX(-50%);
   z-index: 0;
-  filter: brightness(70%) blur(1px);
+  filter: brightness(90%) blur(3px);
 }
 
-.video-hero .contenido {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  color: white;
-  text-align: center;
-  font-size: 3rem;
+@keyframes entrada {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
+
+.video-hero .contenido h2 {
+  opacity: 0;
+  text-shadow: 0 0 5px #A5F557;
+  animation: entrada 1s ease-out forwards;
+  font-size: 10rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  color: #A5F557;
+  margin-bottom: 0.5rem;
+}
+
+.video-hero .contenido p {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  font-weight: 500;
+  font-style: italic;
+  color: #FF2DA3;
+  text-align: right;
+  margin-right: 2rem; /* ajusta la distancia desde el borde derecho */
+}
+
+
+
 
 /* MENÚ */
 /* menu sticky a la derecha */
 #menu {
   position: sticky;
   top: 0;
-  width: 100%;
-  height: 80px;
+  background-color: #111;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background:url('../img/PARED.webp'); */
-  padding: 15px 20px;
-  z-index: 2;
+  padding: 20px 40px;
+  z-index: 1000;
+  border-bottom: 2px solid #A5F557;
+  box-shadow: 0 0 20px #A5F557;
+}
+
+#menu .logo img {
+  height: 50px;
+  filter: drop-shadow(0 0 5px #A5F557);
 }
 
 #menu ul {
+  list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 40px;
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
 #menu ul li a {
   color: white;
   text-decoration: none;
   font-size: 0.8rem;
-  transition: color 0.3s, background-color 0.3s; 
-  
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+}
+
+#menu ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #A5F557;
+  transition: width 0.3s ease;
 }
 
 #menu ul li a:hover {
-  color: rgb(165, 245, 87);
-
+  color: #A5F557;
 }
 
-/* LOGO */
+#menu ul li a:hover::after {
+  width: 100%;
 
-#menu .logo img{
-  height: 50px;
-  cursor: pointer;
-  margin-left: 0;
 }
-
-#menu ul {
-  display: flex;
-  gap: 20px;
-  list-style:none;
-  margin: 0;
-  padding: 0;
-}
-
-
-
 /* SECCIÓN TEXTO */
+
 .seccion-texto {
-  /* s */
   padding: 200px 90px;
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 700px;
+  margin-top: 2em;
   border-radius: 10px;
   color: #eee;
   font-family: 'Montserrat', sans-serif;
-  text-align: center;
+  text-align: justify;
+  line-height: 1.6;
 }
-.seccion-texto h2 {
-  color: #A5F557;
-  font-size: 2rem;
-  margin-bottom: 20px;
+
+.suave {
+  color: #dedede; 
+  font-weight: 400;
 }
+
+.brillante {
+  color: #A5F557; 
+  text-shadow: 0 0 10px #A5F557;
+  font-weight: bold;
+}
+
+.magenta {
+  color: #FF2DA3;
+  text-shadow: 0 0 7px #FF2DA3;
+  font-weight: bold;
+}
+
 
 /* VENTA ENTRADAS */
 #tipos-de-entradas {
+  background: url("../img/fondocantantes.webp");  padding: 3rem 0;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background-color: #f9f9f9;
-  padding: 3rem 0;
 }
+#tipos-de-entradas h2 {
+  color: (165, 245, 87);
+}
+
 
 #tipos-de-entradas form {
   width: 100%;
@@ -331,13 +380,14 @@ h1, .number, .label {
 
 #cuenta-atrás h1 {
   position: relative;
-  z-index: 2; /* más alto que la capa oscura */
+  z-index: 2; 
   font-size: 3rem;
   font-weight: 700;
-  color: #ffffff;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.7); 
+  color: rgb(255, 255, 255);
   margin-bottom: 40px;
   letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900
 }
 
 #cuenta-atrás::before {
@@ -383,7 +433,10 @@ h1, .number, .label {
   font-weight: 700;
   display: block;
   animation: pulse 2s infinite;
-  color: rgb(165, 245, 87);
+  color:#A5F557;
+  text-shadow: 0 0 5px #FF2DA3;
+  
+
 }
 
 .label {
@@ -394,8 +447,8 @@ h1, .number, .label {
 
 /* carrousel homepage */
 #carrousel {
-  background: rgb(165, 245, 87);
-  padding: 60px 0;
+  /* background: rgb(165, 245, 87); */
+background: linear-gradient(135deg, #A5F557, #000);  padding: 60px 0;
   text-align: center;
   font-family: 'Oswald', sans-serif;
 }
@@ -485,7 +538,7 @@ h1, .number, .label {
 
 
 .ver-mas:hover {
-  color: #111;
+  color: #FF2DA3;
   border-color:  rgb(50, 50, 50);
 }
 
@@ -499,9 +552,15 @@ h1, .number, .label {
 /* GALERIA */
 
 #galeria {
-  background-color: #1e1e1e;
-  padding: 40px 20px;
-  font-family: 'Arial', sans-serif;
+  min-height: calc(80vh - 3em);
+  background: url("../img/fondocantantes.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 60px 20px;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
 }
 
 
@@ -571,8 +630,8 @@ h1, .number, .label {
 
 .artista-card img {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .artista-info {
@@ -593,51 +652,67 @@ h1, .number, .label {
 }
 
 .modal {
-  display: none;
   position: fixed;
-  z-index: 100;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.9);
+  height: 100vh;
+  background-color: rgba(173, 173, 173, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: 0.5s;
+}
+
+.modal > p > a {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-top: 2em;
+    color: grey;
+    text-decoration: none;
+}
+
+.modal > figure {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.modal-contenido {
-  max-width: 90%;
-  max-height: 80vh;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+.modal > figure > img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
 }
 
-.cerrar {
+#modal-Cafuné:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.cerrar-modal {
   position: absolute;
-  top: 30px;
-  right: 40px;
-  color: #f9c94c;
-  font-size: 3rem;
+  top: 20px;
+  right: 20px;
+  font-size: 2.5em;
   font-weight: bold;
-  cursor: pointer;
-  transition: color 0.3s ease;
+  color: rgb(2, 2, 2);
+  text-decoration: none;
+  z-index: 1001;
 }
 
-.cerrar:hover {
-  color: #fff;
+.cerrar-modal:hover {
+  color: rgb(165, 245, 87);
 }
 
-
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.6s ease-out;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* SPOIFY PLAYLIST */
 
 .playlist-section {
   background-image: url('fondo-grafiti.png'); /* reemplaza con tu imagen de fondo */

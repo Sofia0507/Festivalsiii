@@ -94,17 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// const lineupSection = document.querySelector('#lineup');
 
-// window.addEventListener('scroll', () => {
-//   const windowHeight = window.innerHeight;
-//   const elementTop = lineupSection.getBoundingClientRect().top;
-//   const elementVisible = 100;
-
-//   if (elementTop < windowHeight - elementVisible) {
-//     lineupSection.classList.add('visible');
-//   }
-// });
 
 
 // VENTA ENTRADAS

@@ -41,12 +41,14 @@
       <div class="lineup-grid">
 
      <!-- Tarjeta Cruz Cafuné -->
-     <div class="artista-card" onclick="abrirModal('img/cartel-cruz.webp')">
-        <img src="img/CRruz_cafune.webp" alt="Cruz Cafuné">
-        <div class="artista-info">
-          <h3>CRUZ CAFUNÉ</h3>
-          <p>Trap · Soul · Canarias</p>
-        </div>
+     <div class="artista-card">
+       <a href="#modal-Cafuné">
+          <img src="img/CRruz_cafune.webp" alt="Cruz Cafuné">
+          <div class="artista-info">
+            <h3>CRUZ CAFUNÉ</h3>
+            <p>Trap · Soul · Canarias</p>
+          </div>
+        </a>
       </div>
 
       <!-- Tarjeta ZENIT -->
@@ -475,6 +477,15 @@
       </div>
       </div>
 
+
+      <!-- Modal -->
+      <div class="modal" id="modal-Cafuné">
+        <a href="#lineup" class="cerrar-modal">X</a>
+        <figure>
+          <img src="img/CRruz_cafune.webp" alt="">
+        </figure>
+      </div>
+
       <div class="texto-explicativo">
         <h2>ESCUCHA NUESTRA PLAYLIST OFICIAL!!</h2>
       </div>
@@ -482,12 +493,7 @@
       <section class="playlist-section">
        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0SDXCNjTuVcUv5tomjod10?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </section>
-      <!-- Modal -->
-      <div id="modal" class="modal">
-        <span class="cerrar" onclick="cerrarModal()">&times;</span>
-        <img id="modal-img" class="modal-contenido" alt="Cartel ampliado">
-      </div>
-   </section>
+    
 
 
   <footer>  
