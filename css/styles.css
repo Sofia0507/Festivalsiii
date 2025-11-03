@@ -186,134 +186,184 @@ a{
 
 /* VENTA ENTRADAS */
 #tipos-de-entradas {
-  background: url("../img/fondocantantes.webp");  padding: 3rem 0;
+  padding: 3rem 0;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-}
-#tipos-de-entradas h2 {
-  color: (165, 245, 87);
-}
-
-
-#tipos-de-entradas form {
-  width: 100%;
-  max-width: 720px;
-  background-color: rgb(165, 245, 87);
-  border-radius: 10px;
-  box-shadow:0,0,10px,rgba(0,0,0,0.1);
-  padding: 2rem;
-  font-family:var(--font-family);
-}
-
-#tipos-de-entradas p {
-  margin-bottom: 1rem;
-  font-size: 0.70rem;
-  color: #000000;
-  font-family: "Montserrat",sans-serif;
-  text-align: left;
-}
-
-
-#tipos-de-entradas form div:not(.total-price-cont):not(.total-management-expenses) {
-  background-color: #000000;
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin-bottom: 5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: box-shadow 0.2s ease;
-}
-
-#tipos-de-entradas form label {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color:rgb(165, 245, 87);
-  width: auto;
-  font-family: "Montserrat",sans-serif;
+  text-shadow: 0 0 10px #A5F557;
 }
 
 #tipos-de-entradas h2 {
-  text-align: center;
-  width: 100%;
-  font-size: 3rem;
-  margin-bottom: 2rem;
-}
-
-#tipos-de-entradas form input[type="number"] {
-  width: 5rem;
-  font-size: 1.1rem;
-  text-align: center;
-  border-radius: 6px;
-  border: 1px solid #000000;
-  padding: 0.4rem;
-  transition: all 0.2s ease;
-}
-#tipos-de-entradas form input[type="number"]:focus {
-  outline: none;
-  border-color: var(--secondary-color);
-  box-shadow: 0 0 5px var(--secondary-color);
-}
-
-
-#tipos-de-entradas form .total-price-cont {
-  font-size: 1.6rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 2rem 0 0 0;
-}
-
-#tipos-de-entradas form #buyPass.disabled {
- box-shadow: 0 4px 10px rgba(0,0,0,0.4); ;
-  color: #000000;
-  cursor: not-allowed;
-}
-
-#tipos-de-entradas form .total-price-cont p {
-  color: var(--accent-color);
-}
-
-#tipos-de-entradas form input[type="submit"] {
-
-  color: rgb(165, 245, 87);
-  width: 100%;
-  display: block;
-  text-align: center;
-  margin-top: 1.5rem;
-  padding: 1rem;
-  font-size: 1.3rem;
-  border-radius: 8px;
+ color: rgb(165, 245, 87);
+ font-size: 2.8rem;
  
 }
 
-#tipos-de-entradas form input[type="submit"]:hover {
-  background-color: rgb(182, 182, 182);
-  color: var(--secondary-color);
-  border: 1px solid var(--secondary-color);
+#venta-entradas {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-
-
-.ticket-item {
- background-color: #fafafa;
- border-radius: 10px;
- padding: 1.5rem;
- margin-bottom: 2rem;
- display: flex;
- justify-content: space-between;
- align-items: flex-start;
-  gap: 1.5rem;
-}
-
-.ticket-item label {
-  flex: 1;
+/* Tarjeta de entrada */
+.entrada-card {
+  background-color: #000000;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px #FF2DA3;
+  width: 370px;
+  min-height: 500px; 
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border:#A5F557;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;     
+  align-items: center;         
+  text-align: center;          
 }
 
+.entrada-card:hover {
+  transform: scale(1.05);
+} 
+
+
+
+/* Título */
+.entrada-card h3 {
+  font-size: 1.4rem;
+  color: rgb(165, 245, 87);
+  margin-bottom: 1rem;
+}
+
+/* Descripción */
+.entrada-card p {
+  font-size: 0.7rem;
+  color: #dddddd;
+  margin-bottom: 3rem;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+/* Precio */
+.entrada-card .precio {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(165, 245, 87);
+  margin-bottom: 1rem;
+}
+
+/* Botón */
+.entrada-card button {
+  background-color: rgb(165, 245, 87);
+  color: #000000;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.entrada-card button:hover {
+  background-color: rgb(140, 220, 70);
+}
+
+
+.resumen-final {
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: 'Montserrat', sans-serif;
+  color: #A5F557;
+
+}
+
+.resumen-linea {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.resumen-linea.total {
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-top: 1px solid #A5F557;
+  padding-top: 1rem;
+}
+
+.continuar-btn {
+  background-color: #000000;
+  color: #A5F557;
+  border: 2px solid #A5F557;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.continuar-btn:hover {
+  background-color: #FF2DA3;
+  color: #000000;
+}
+
+.seleccion-grupo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.entrada-input {
+  width: 70px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+  border: 2px solid #A5F557;
+  border-radius: 8px;
+  background-color: #0f0f0f;
+  color: #A5F557;
+}
+
+.seleccionar-btn {
+  background-color: #000000;
+  color: #A5F557;
+  border: 2px solid #A5F557;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.seleccionar-btn:hover {
+  background-color: #A5F557;
+  color: #000000;
+}
+.entrada-input {
+  width: 70px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+  border: 2px solid #A5F557;
+  border-radius: 8px;
+  background-color: #0f0f0f;
+  color: #A5F557;
+}
+/* 
 .ticket-info {
   display: block;
   margin-top: 0.4rem;
@@ -321,7 +371,25 @@ a{
   line-height: 1.4;
   color: #bbbbbb;
   font-family: "Montserrat";
+
+.ticket-item {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
 }
+
+.ticket-item:hover {
+  box-shadow: 0 0 12px rgba(165, 245, 87, 0.4);
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+}
+
 
 /* MARQUESINA */
 
@@ -781,10 +849,9 @@ a[href^="#modal-"]:visited {
 /* SPOIFY PLAYLIST */
 
 .playlist-section {
-  background-image: url('fondo-grafiti.png'); /* reemplaza con tu imagen de fondo */
   background-size: cover;
   background-position: center;
-  padding:  40px 20x;
+  padding:  40px 20px;
   text-align: center;
   max-width: 500px;
   margin: 0 auto;
