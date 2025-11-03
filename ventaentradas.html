@@ -23,7 +23,7 @@
             </a>
             <ul>
                 <li>
-                  <a href="cantanteshorarios.html">Cantantes confirmados y horarios</a>
+                  <a href="cantantes.html">Cantantes confirmados</a>
                 </li>
                 <li>
                   <a href="galeria.html">Galería</a>
@@ -43,87 +43,86 @@
        <h2>TIPOS DE ENTRADAS</h2> 
     </section>
     <main>
-        <section id="tipos-de-entradas">
-            <form id="form">
-                <div class="ticket-item">
-                    <label for="abono-general">
-                        🎟️ ABONO GENERAL
-                        <span class="ticket-info">
-                            Acceso los tres días al Rocanrola 2026 + vaso conmemorativo.
-                            Menores de 16 deben ir acompañados y con autorización firmada por padres
-                        </span>
-                        <span class="ticket-info">
-                            Acceso al recinto desde las 16:00 hasta cierre
-                        </span>
-                    </label>
+    <section id="tipos-de-entradas">
+    <form id="form">
+      <div class="ticket-item">
+        <label for="abono-general">
+          🎟️ ABONO GENERAL
+          <span class="ticket-info">
+            Acceso los tres días al Rocanrola 2026 + vaso conmemorativo.
+            Menores de 16 deben ir acompañados y con autorización firmada por padres
+          </span>
+          <span class="ticket-info">
+            Acceso al recinto desde las 16:00 hasta cierre
+          </span>
+        </label>
 
-                    <input
-                        type="number"
-                        name="abono-general"
-                        id="abono-general"
-                        min="0"
-                        value="0"
-                        data-price="50" />
-                </div>
+        <input
+          type="number"
+          name="abono-general"
+          id="abono-general"
+          min="0"
+          value="0"
+          data-price="50" />
+      </div>
 
-                <div class="ticket-item">
-                    <label for="abono-front">
-                        🎟️ ABONO FRONT
-                        <span class="ticket-info">
-                            Acceso los tres días al Rocanrola 2026 + Acceso al Front Stage+ 
-                            vaso conmemorativo.Menores de 16 deben ir acompañados y con autorización firmada por padres
-                        </span>
-                        <span class="ticket-info">
-                            Acceso al recinto desde las 16:00 hasta cierre
-                        </span>
-                    </label>
-                    
-                    <input
-                        type="number"
-                        name="abono-general"
-                        id="abono-general"
-                        min="0"
-                        value="0"
-                        data-price="50" />
-                </div>
+      <div class="ticket-item">
+        <label for="abono-front">
+          🎟️ ABONO FRONT
+          <span class="ticket-info">
+            Acceso los tres días al Rocanrola 2026 + Acceso al Front Stage +
+            vaso conmemorativo. Menores de 16 deben ir acompañados y con autorización firmada por padres
+          </span>
+          <span class="ticket-info">
+            Acceso al recinto desde las 16:00 hasta cierre
+          </span>
+        </label>
 
-                <div class="ticket-item">
-                    <label for="abono-vip">
-                        🎟️ ABONO VIP (+18)
-                        <span class="ticket-info">
-                            Acceso los tres días al Rocanrola 2026, tarima VIP elevada +
-                            Acceso al Front Stage+ 10 aguas+12 consumiciones+ vaso conmemorativo 
-                            + Pack Merchandising.Entrada para mayores de 18 años.
-                            
-                        </span>
-                        <span class="ticket-info">
-                            Acceso al recinto desde las 16:00 hasta cierre
-                        </span>
-                    </label>
-                    
-                    <input
-                        type="number"
-                        name="abono-vip"
-                        id="abono-vip"
-                        min="0"
-                        value="0"
-                        data-price="150" />
-                </div>
+        <input
+          type="number"
+          name="abono-front"
+          id="abono-front"
+          min="0"
+          value="0"
+          data-price="80" />
+      </div>
 
-                <div class="total-management-expenses">
-                    <p>Gastos de gestión:</p>
-                    <p id="managementExpenses">0 €</p>
-                </div>
+      <div class="ticket-item">
+        <label for="abono-vip">
+          🎟️ ABONO VIP (+18)
+          <span class="ticket-info">
+            Acceso los tres días al Rocanrola 2026, tarima VIP elevada +
+            Acceso al Front Stage + 10 aguas + 12 consumiciones + vaso conmemorativo 
+            + Pack Merchandising. Entrada para mayores de 18 años.
+          </span>
+          <span class="ticket-info">
+            Acceso al recinto desde las 16:00 hasta cierre
+          </span>
+        </label>
 
-                <div class="total-price-cont">
-                    <p>Total:</p>
-                    <p id="totalPrice">0 €</p>
-                </div>
+        <input
+          type="number"
+          name="abono-vip"
+          id="abono-vip"
+          min="0"
+          value="0"
+          data-price="150" />
+      </div>
 
-                <input id="buyPass" type="submit" value="Continuar" class="disabled" />
-            </form>
-        </section>
-    </main>
+      <div class="total-management-expenses">
+        <p>Gastos de gestión:</p>
+        <p id="managementExpenses">0 €</p>
+      </div>
+
+      <div class="total-price-cont">
+        <p>Total:</p>
+        <p id="totalPrice">0 €</p>
+      </div>
+
+      <input id="buyPass" type="submit" value="Continuar" class="disabled" />
+    </form>
+  </section>
+</main>
 
     
     <script src="js/script.js"></script>

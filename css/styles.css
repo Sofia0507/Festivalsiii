@@ -3,6 +3,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -13,7 +15,13 @@
 body{
   overflow: hidden;
   overflow-y: auto;
+  background: url('../img/fondocantantes.webp'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
 }
+
 
 h2 {
   font-family: 'Oswald', sans-serif;
@@ -30,6 +38,14 @@ a{
 
 /* VIDEO HERO */
 
+.video-hero .contenido {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: left; /* alinea todo el texto a la izquierda */
+}
 .video-hero {
   position:relative;
   width: 100%;
@@ -47,80 +63,138 @@ a{
   object-fit: cover;
   transform: translateX(-50%);
   z-index: 0;
-  filter: brightness(70%) blur(1px);
+  filter: brightness(90%) blur(3px);
 }
 
-.video-hero .contenido {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  color: white;
-  text-align: center;
-  font-size: 3rem;
+@keyframes entrada {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
+
+.video-hero .contenido h2 {
+  opacity: 0;
+  text-shadow: 0 0 5px #A5F557;
+  animation: entrada 1s ease-out forwards;
+  font-size: 10rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  color: #A5F557;
+  margin-bottom: 0.5rem;
+}
+
+.video-hero .contenido p {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  font-weight: 500;
+  font-style: italic;
+  color: #FF2DA3;
+  text-align: right;
+  margin-right: 2rem; /* ajusta la distancia desde el borde derecho */
+}
+
+
+
 
 /* MENÚ */
 /* menu sticky a la derecha */
 #menu {
   position: sticky;
   top: 0;
-  width: 100%;
-  /* height: 80px; */
+  background-color: #111;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgb(0, 0, 0);
-  padding: 15px 20px;
-  z-index: 2;
+  padding: 20px 40px;
+  z-index: 1000;
+  border-bottom: 2px solid #A5F557;
+  box-shadow: 0 0 20px #A5F557;
+}
+
+#menu .logo img {
+  height: 50px;
+  filter: drop-shadow(0 0 5px #A5F557);
 }
 
 #menu ul {
+  list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 40px;
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
 #menu ul li a {
   color: white;
   text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s, background-color 0.3s; 
-  
+  font-size: 0.8rem;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+}
+
+#menu ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #A5F557;
+  transition: width 0.3s ease;
 }
 
 #menu ul li a:hover {
-  color: rgb(165, 245, 87);
-
+  color: #A5F557;
 }
 
-/* LOGO */
+#menu ul li a:hover::after {
+  width: 100%;
 
-#menu .logo img{
-  height: 50px;
-  cursor: pointer;
-  margin-left: 0;
+}
+/* SECCIÓN TEXTO */
+
+.seccion-texto {
+  padding: 200px 90px;
+  max-width: 700px;
+  margin-top: 2em;
+  border-radius: 10px;
+  color: #eee;
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  line-height: 1.6;
 }
 
-#menu ul {
-  display: flex;
-  gap: 20px;
-  list-style:none;
-  margin: 0;
-  padding: 0;
+.suave {
+  color: #dedede; 
+  font-weight: 400;
 }
+
+.brillante {
+  color: #A5F557; 
+  text-shadow: 0 0 10px #A5F557;
+  font-weight: bold;
+}
+
+.magenta {
+  color: #FF2DA3;
+  text-shadow: 0 0 7px #FF2DA3;
+  font-weight: bold;
+}
+
 
 /* VENTA ENTRADAS */
 #tipos-de-entradas {
+  background: url("../img/fondocantantes.webp");  padding: 3rem 0;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background-color: #f9f9f9;
-  padding: 3rem 0;
 }
+#tipos-de-entradas h2 {
+  color: (165, 245, 87);
+}
+
 
 #tipos-de-entradas form {
   width: 100%;
@@ -249,25 +323,83 @@ a{
   font-family: "Montserrat";
 }
 
+/* MARQUESINA */
 
+.marquesina{
+  width: 100%;
+  overflow: hidden;
+  background: #A5F557;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  padding: 10px 0;
+}
+
+h1, .number, .label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.marquesina-contenido {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 90s linear infinite;
+  padding-left: 100%;
+}
+
+.marquesina-contenido span {
+  display: inline-block;
+  padding-right: 30px; 
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 /* CUENTA ATRAS */
 
 #cuenta-atrás{
+  position: relative;
   text-align: center;
   padding: 60px 20px;
-  background: #111;
+  background: url("../img/fondo-cuentaatrassi.webp");
+  background-position: top center;
+  background-size: cover;
   color: rgb(165, 245, 87);
   font-family:'Oswald',sans-serif;
+  overflow: hidden;
 }
 
 #cuenta-atrás h1 {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  color: seashell;
+  position: relative;
+  z-index: 2; 
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900
 }
+
+#cuenta-atrás::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* oscurece el fondo */
+  z-index: 0;
+}
+
+
 
 .countdown {
   display: flex;
@@ -278,16 +410,33 @@ a{
 }
 
 .countdown div {
-  background: #222;
-  border-radius:15px;
-  padding: 20px 30px;
+  background: #111;
+  border-radius: 15px;
+  padding: 25px 35px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
   transition: transform 0.3s ease;
+}
+
+.countdown div:hover {
+  transform: scale(1.05);
+}
+
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 
 .number {
   font-size: 3.5rem;
   font-weight: 700;
   display: block;
+  animation: pulse 2s infinite;
+  color:#A5F557;
+  text-shadow: 0 0 5px #FF2DA3;
+  
+
 }
 
 .label {
@@ -298,8 +447,8 @@ a{
 
 /* carrousel homepage */
 #carrousel {
-  background: rgb(165, 245, 87);
-  padding: 60px 0;
+  /* background: rgb(165, 245, 87); */
+background: linear-gradient(135deg, #A5F557, #000);  padding: 60px 0;
   text-align: center;
   font-family: 'Oswald', sans-serif;
 }
@@ -321,7 +470,6 @@ a{
 
 .carrousel-track {
   display: flex;
-  justify-content: center;
   gap: 20px;
   transition: transform 0.5s ease;
 }
@@ -359,17 +507,14 @@ a{
   z-index: 10;
   padding: 0.5rem 1.2rem;
   border-radius: 10px;
-  /* transition: background 0.3s; */
 }
 
-/* flecha izq */
 .carrousel-button.prev {
-  left: 25px;
+  left: 10px;
 }
 
-/* flecha drcha */
 .carrousel-button.next {
-  right: 25px;
+  right: 10px;
 }
 
 .carrousel-button:hover {
@@ -393,16 +538,29 @@ a{
 
 
 .ver-mas:hover {
-  color: #111;
+  color: #FF2DA3;
   border-color:  rgb(50, 50, 50);
+}
+
+
+@media (max-width: 768px) {
+  .carrousel-item {
+    width: 80%;
+  }
 }
 
 /* GALERIA */
 
 #galeria {
-  background-color: #1e1e1e;
-  padding: 40px 20px;
-  font-family: 'Arial', sans-serif;
+  min-height: calc(80vh - 3em);
+  background: url("../img/fondocantantes.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 60px 20px;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
 }
 
 
@@ -426,17 +584,21 @@ a{
 }
 
 
-
-/* cantantes confirmados y horarios */
+/* CANTANNTES CONFIRMADOS  */
 #lineup {
-  background-color: #111;
+  min-height: calc(80vh - 3em);
+  background: url("../img/fondocantantes.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   padding: 60px 20px;
   font-family: 'Oswald', sans-serif;
   text-align: center;
 }
 
 #lineup h2 {
-  color: #f9c94c;
+  color: rgb(165, 245, 87);
   font-size: 2.8rem;
   margin-bottom: 40px;
   letter-spacing: 2px;
@@ -451,7 +613,9 @@ a{
 
 .artista-card {
   background-color: #1e1e1e;
-  border: 2px solid #f9c94c;
+  border: 3px solid rgb(165, 245, 87);
+  filter: drop-shadow(0 0 2px rgb(165, 245, 87));
+  box-shadow: inset 0 0 5px rgb(165, 245, 87);
   border-radius: 15px;
   overflow: hidden;
   width: 250px;
@@ -466,8 +630,8 @@ a{
 
 .artista-card img {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .artista-info {
@@ -478,7 +642,7 @@ a{
 .artista-info h3 {
   margin: 0;
   font-size: 1.4rem;
-  color: #f9c94c;
+  color: rgb(165, 245, 87);
 }
 
 .artista-info p {
@@ -488,39 +652,181 @@ a{
 }
 
 .modal {
-  display: none;
   position: fixed;
-  z-index: 100;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.9);
+  height: 100vh;
+  background-color: rgba(173, 173, 173, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: 0.5s;
+}
+
+.modal > p > a {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-top: 2em;
+  color: grey;
+  text-decoration: none;
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+  box-shadow: none;
+}
+
+/* para los enlaces que apuntan a modales no salga la linea morada ni negra (para eliminarlo) */
+
+a[href^="#modal-"],
+a[href^="#modal-"]:focus,
+a[href^="#modal-"]:active,
+a[href^="#modal-"]:visited {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  text-decoration: none !important;
+  color: inherit !important;
+}  
+.modal > figure {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.modal-contenido {
-  max-width: 90%;
-  max-height: 80vh;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+.modal > figure > img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
 }
 
-.cerrar {
+#modal-Cafuné:target,
+#modal-zenit:target,
+#modal-yeicoxtoni:target,
+#modal-hard:target,
+#modal-tremendoygriffi:target,
+#modal-santasalut:target,
+#modal-israelb:target,
+#modal-hoke:target,
+#modal-eazyboi:target,
+#modal-alsafir:target,
+#modal-arce:target,
+#modal-zetazen:target,
+#modal-trapani:target,
+#modal-tote:target,
+#modal-eme:target,
+#modal-shoda:target,
+#modal-hai:target,
+#modal-sharif:target,
+#modal-recycled:target,
+#modal-reality:target,
+#modal-nikone:target,
+#modal-nadal:target,
+#modal-nach:target,
+#modal-morodo:target,
+#modal-miranda:target,
+#modal-midas:target,
+#modal-matas:target,
+#modal-coro:target,
+#modal-l0rna:target,
+#modal-grecas:target,
+#modal-ambkor:target,
+#modal-bejo:target,
+#modal-blake:target,
+#modal-dano:target,
+#modal-denom:target,
+#modal-dollar:target,
+#modal-chojin:target,
+#modal-elitofffana:target,
+#modal-jincho:target,
+#modal-faenna:target,
+#modal-fernando:target,
+#modal-prego:target,
+#modal-israel:target,
+#modal-jaloner:target,
+#modal-jime:target,
+#modal-juancho:target,
+#modal-k1za:target,
+#modal-kaze:target{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.cerrar-modal {
   position: absolute;
-  top: 30px;
-  right: 40px;
-  color: #f9c94c;
-  font-size: 3rem;
+  top: 20px;
+  right: 20px;
+  font-size: 2.5em;
   font-weight: bold;
-  cursor: pointer;
-  transition: color 0.3s ease;
+  color: rgb(2, 2, 2);
+  text-decoration: none;
+  z-index: 1001;
 }
 
-.cerrar:hover {
-  color: #fff;
+.cerrar-modal:hover {
+  color: rgb(165, 245, 87);
 }
+
+/* SPOIFY PLAYLIST */
+
+.playlist-section {
+  background-image: url('fondo-grafiti.png'); /* reemplaza con tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  padding:  40px 20x;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+.playlist-section iframe {
+  border: none;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  border-radius: 12px;
+
+} 
+
+.playlist-section {
+  margin-top: 60px; 
+  max-width: 700px;
+}
+
+/* texto explicativo */
+.texto-explicativo {
+  max-width: 700px;
+  margin: 40px auto 20px auto;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #A5F557;
+}
+
+.texto-explicativo h2 {
+  font-size: 2rem;
+  display: inline;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #A5F557, 0 0 20px #A5F557;
+}
+
+.texto-explicativo p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+
+
 
 
 
@@ -693,7 +999,7 @@ a{
 
 footer {
   background-color: #111;
-  color: #f9c94c;
+  color: rgb(165, 245, 87);
   padding: 40px 20px;
   font-family: 'Oswald', sans-serif;
   text-align: center;
@@ -709,13 +1015,13 @@ footer {
 .footer-info p,
 .footer-info a {
   margin: 5px 0;
-  color: #f9c94c;
+  color: rgb(165, 245, 87);
   font-size: 1rem;
 }
 
 .footer-links a {
   margin: 0 10px;
-  color: #f9c94c;
+  color: rgb(165, 245, 87);
   text-decoration: none;
   font-weight: bold;
 }
@@ -727,7 +1033,7 @@ footer {
 .footer-social a {
   margin: 0 10px;
   font-size: 1.5rem;
-  color: #f9c94c;
+  color: rgb(165, 245, 87);
   transition: color 0.3s ease;
 }
 
@@ -762,10 +1068,10 @@ footer {
 
 .Cruz-cafune {
   position: absolute;
-  top: 20%; /* ajusta según lo que necesites */
+  top: 20%; 
   left: 50%;
   transform: translateX(-50%);
-  width: 300px; /* ajusta el tamaño según tu diseño */
+  width: 300px; 
   z-index: 2;
 }
 

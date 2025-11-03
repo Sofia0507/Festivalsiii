@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 });
 
+
 // VENTA ENTRADAS
 document.addEventListener("DOMContentLoaded", function () {
     const inputs = document.querySelectorAll('input[type="number"]');
