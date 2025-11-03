@@ -668,13 +668,32 @@ background: linear-gradient(135deg, #A5F557, #000);  padding: 60px 0;
 }
 
 .modal > p > a {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-top: 2em;
-    color: grey;
-    text-decoration: none;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-top: 2em;
+  color: grey;
+  text-decoration: none;
+  outline: none;
 }
 
+a:focus,
+a:active {
+  outline: none;
+  box-shadow: none;
+}
+
+/* para los enlaces que apuntan a modales no salga la linea morada ni negra (para eliminarlo) */
+
+a[href^="#modal-"],
+a[href^="#modal-"]:focus,
+a[href^="#modal-"]:active,
+a[href^="#modal-"]:visited {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  text-decoration: none !important;
+  color: inherit !important;
+}  
 .modal > figure {
   width: 100%;
   max-width: 600px;
@@ -691,9 +710,56 @@ background: linear-gradient(135deg, #A5F557, #000);  padding: 60px 0;
   object-fit: contain;
 }
 
-#modal-Cafuné:target {
-    opacity: 1;
-    visibility: visible;
+#modal-Cafuné:target,
+#modal-zenit:target,
+#modal-yeicoxtoni:target,
+#modal-hard:target,
+#modal-tremendoygriffi:target,
+#modal-santasalut:target,
+#modal-israelb:target,
+#modal-hoke:target,
+#modal-eazyboi:target,
+#modal-alsafir:target,
+#modal-arce:target,
+#modal-zetazen:target,
+#modal-trapani:target,
+#modal-tote:target,
+#modal-eme:target,
+#modal-shoda:target,
+#modal-hai:target,
+#modal-sharif:target,
+#modal-recycled:target,
+#modal-reality:target,
+#modal-nikone:target,
+#modal-nadal:target,
+#modal-nach:target,
+#modal-morodo:target,
+#modal-miranda:target,
+#modal-midas:target,
+#modal-matas:target,
+#modal-coro:target,
+#modal-l0rna:target,
+#modal-grecas:target,
+#modal-ambkor:target,
+#modal-bejo:target,
+#modal-blake:target,
+#modal-dano:target,
+#modal-denom:target,
+#modal-dollar:target,
+#modal-chojin:target,
+#modal-elitofffana:target,
+#modal-jincho:target,
+#modal-faenna:target,
+#modal-fernando:target,
+#modal-prego:target,
+#modal-israel:target,
+#modal-jaloner:target,
+#modal-jime:target,
+#modal-juancho:target,
+#modal-k1za:target,
+#modal-kaze:target{
+  opacity: 1;
+  visibility: visible;
 }
 
 
