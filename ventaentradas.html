@@ -15,146 +15,160 @@
 </head>
 <body>
    <header>
-       <nav id="menu">
-            <!-- logo menú -->
-            <a href="index.html" class="logo">
-                <img src="img/Marca-Rocanrola-2025.webp" alt="logo rocanrola">
+            <nav id="menu" aria-label="Menú principal">
+                <!-- logo menú -->
+                <a href="index.html" class="logo">
+                    <img src="img/Marca-Rocanrola-2025.webp" alt="logo rocanrola">
+                </a>
 
-            </a>
-            <ul>
-                <li>
-                  <a href="cantantes.html">Cantantes confirmados</a>
-                </li>
-                <li>
-                  <a href="galeria.html">Galería</a>
-                </li>
-                <li>
-                  <a href="ventaentradas.html">Venta abonos</a>
-                </li>
-          </ul>
-        </nav>
-    </header>
+                <button class="menu-toggle" id="menuToggle">
+                    <img src="img/hamburguesa.png" alt="Menu" class="menu-icon">
+                </button>
 
+                <ul id="menu-links">
+                    <li>
+                     <a href="cantantes.html">Cantantes confirmados</a>
+                    </li>
 
-    <section id="tipos-de-entradas"> 
-      <h2>TIPOS DE ENTRADAS</h2> 
-    </section>
+                    <li>
+                     <a href="horarios.html">Horarios</a>
+                    </li>
 
-    <section id="venta-entradas">
-      <div class="entrada-card">
-        <h3>🎟️ ABONO GENERAL</h3>
-        <p> Acceso los tres días al Rocanrola 2026 + vaso conmemorativo.
-          Menores de 16 deben ir acompañados y con autorización firmada por padres. 
-          Acceso al recinto desde las 16:00 hasta cierre
-        </p>
-        <div class="precio">50€</div>
-          <div class="seleccion-grupo">
-            <input
-             type="number"
-              name="abono-general"
-              id="abono-general"
-              min="0"
-              value="0"
-              data-price="50"
-              class="entrada-input" />
-              <button class="seleccionar-btn">Seleccionar</button>
-            </div>
-          </div>
-      
-       
-         <div class="entrada-card">
-            <h3>🎟️ ABONO FRONT STAGE</h3>
-            <p> Acceso los tres días al Rocanrola 2026 + Acceso al Front Stage +
-              vaso conmemorativo. Menores de 16 deben ir acompañados y con autorización firmada por padres.
-              Acceso al recinto desde las 16:00 hasta cierre
-            </p>
-            <div class="precio">95€</div>
+                    <li>
+                     <a href="galeria.html">Galería</a>
+                    </li>
+                    <li>
+                     <a href="ventaentradas.html">Venta abonos</a>
+                    </li>
 
-            <div class="seleccion-grupo">
-              <input
-                  type="number"
-                  name="abono-front"
-                  id="abono-front"
-                  min="0"
-                  value="0"
-                  data-price="95"
-                  class="entrada-input" />
-                <button class="seleccionar-btn">Seleccionar</button>
-            </div>
-        </div>
-       
+                </ul>
+            </nav>
+        </header>
 
-
-
-      
-      <div class="entrada-card">
-        <h3>🎟️ ABONO ABONO VIP (+18)</h3>
-         <p> Acceso los tres días al Rocanrola 2026, tarima VIP elevada +
-            Acceso al Front Stage + 10 aguas + 12 consumiciones + vaso conmemorativo 
-            + Pack Merchandising. Entrada para mayores de 18 años.
-            Acceso al recinto desde las 16:00 hasta cierre
-          </p>
-          <div class="precio">120€</div>
-
-          <div class="seleccion-grupo">
-            <input
-              type="number"
-              name="abono-vip"
-              id="abono-vip"
-              min="0"
-              value="0"
-              data-price="120"
-              class="entrada-input" />
-            <button class="seleccionar-btn">Seleccionar</button>
-            </div>
-       </div>
-    </section>
-
-      <section class="resumen-final">
-        <div class="resumen-linea">
-          <span>Gastos de gestión:</span>
-          <span id="managementExpenses"></span>
-        </div>
-
-        <div class="resumen-linea total">
-          <span>Total:</span>
-          <span id="totalPrice"></span>
-        </div>
-        <button class="continuar-btn">CONTINUAR</button>
-      </section>
-    
-
-      
-    <script src="js/script.js"></script>
-  </body>
-  <footer>  
-      <div class="footer-container">
-    <div class="footer-info">
-      <p>© 2025 Festival Rocanrola</p>
-      <p>Aeródromo de La Morgal, Asturias</p>
-      <p>Contacto: <a href="mailto:contacto@rocanrola.com">contacto@rocanrola.com</a></p>
-    </div>
-
-    <div class="footer-links">
-      <a href="#inicio">Inicio</a>
-      <a href="#lineup">Lineup</a>
-      <a href="#entradas">Entradas</a>
-      <a href="#galeria">Galería</a>
-    </div>
-
-    <div class="footer-social">
-      <a href="https://facebook.com/rocanrola" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://instagram.com/rocanrola" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://tiktok.com/@rocanrola" target="_blank"><i class="fab fa-tiktok"></i></a>
-    </div>
-
-    <div class="footer-legal">
-      <a href="#">Política de privacidad</a> ·
-      <a href="#">Aviso legal</a> ·
-      <a href="#">Cookies</a>
-    </div>
-  </div>
         
+          <section id="tipos-de-entradas"> 
+            <h2>TIPOS DE ENTRADAS</h2> 
+          </section>
+          <form  id="form" act>
+            <div>
+              <!-- ABONO GENERAL -->
+              <section id="venta-entradas">
+                <div class="entrada-card">
+                  <h3>🎟️ ABONO GENERAL</h3>
+                  <p> Acceso los tres días al Rocanrola 2026 + vaso conmemorativo.
+                    Menores de 16 deben ir acompañados y con autorización firmada por padres. 
+                    Acceso al recinto desde las 16:00 hasta cierre
+                  </p>
+                  <div class="precio">50€</div>
+                    <div class="seleccion-grupo">
+                      <input
+                      type="number"
+                        name="abono-general"
+                        id="abono-general"
+                        min="0"
+                        value="0"
+                        data-price="50"
+                        class="entrada-input"/>
+                        
+                        
+                      <button class="seleccionar-btn">Seleccionar</button>
+                      </div>
+                </div>        
+              
+                <!-- ABONO FRONT -->
+                <div class="entrada-card">
+                    <h3>🎟️ ABONO FRONT STAGE</h3>
+                    <p> Acceso los tres días al Rocanrola 2026 + Acceso al Front Stage +
+                      vaso conmemorativo. Menores de 16 deben ir acompañados y con autorización firmada por padres.
+                      Acceso al recinto desde las 16:00 hasta cierre
+                    </p>
+                    <div class="precio">95€</div>
+
+                    <div class="seleccion-grupo">
+                      <input
+                          type="number"
+                          name="abono-front"
+                          id="abono-front"
+                          min="0"
+                          value="0"
+                          data-price="95"
+                          class="entrada-input" />
+                        <button class="seleccionar-btn">Seleccionar</button>
+                    </div>
+                </div>
+              
+              <!-- ABONO VIP -->
+              <div class="entrada-card">
+                <h3>🎟️ ABONO ABONO VIP (+18)</h3>
+                <p> Acceso los tres días al Rocanrola 2026, tarima VIP elevada +
+                    Acceso al Front Stage + 10 aguas + 12 consumiciones + vaso conmemorativo 
+                    + Pack Merchandising. Entrada para mayores de 18 años.
+                    Acceso al recinto desde las 16:00 hasta cierre
+                  </p>
+                  <div class="precio">120€</div>
+
+                  <div class="seleccion-grupo">
+                    <input
+                      type="number"
+                      name="abono-vip"
+                      id="abono-vip"
+                      min="0"
+                      value="0"
+                      data-price="120"
+                      class="entrada-input" />
+                    <button class="seleccionar-btn">Seleccionar</button>
+                    </div>
+              </div>
+            </section>
+
+            <section class="resumen-final">
+              <div class="resumen-linea">
+                <span>Gastos de gestión:</span>
+                <span id="managementExpenses">0.00</span>
+              </div>
+
+              <div class="resumen-linea total">
+                <span>Total:</span>
+                <span id="totalPrice">0.00</span>
+              </div>
+              <button id="buyPass" class="continuar-btn disabled">CONTINUAR</button>
+            </section>
+          </form>
+        
+
+        
+
+          
+        <script src="js/script.js"></script>
+      </body>
+      <footer>  
+          <div class="footer-container">
+        <div class="footer-info">
+          <p>© 2025 Festival Rocanrola</p>
+          <p>Aeródromo de La Morgal, Asturias</p>
+          <p>Contacto: <a href="mailto:contacto@rocanrola.com">contacto@rocanrola.com</a></p>
+        </div>
+
+      <div class="footer-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#lineup">Lineup</a>
+        <a href="#entradas">Entradas</a>
+        <a href="#galeria">Galería</a>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://facebook.com/rocanrola" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/rocanrola" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com/@rocanrola" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+
+      <div class="footer-legal">
+        <a href="#">Política de privacidad</a> ·
+        <a href="#">Aviso legal</a> ·
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+          
 
     </footer>
 </html>

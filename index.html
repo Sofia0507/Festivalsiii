@@ -20,24 +20,34 @@
           <source src="video/fondo1.webm" type="video/webm">
         </video>
 
-        <nav id="menu">
-            <!-- logo menú -->
-            <a href="index.html" class="logo">
-                <img src="img/Marca-Rocanrola-2025.webp" alt="logo rocanrola">
+        <nav id="menu" aria-label="Menú principal">
+          <!-- logo menú -->
+          <a href="index.html" class="logo">
+            <img src="img/Marca-Rocanrola-2025.webp" alt="logo rocanrola">
+          </a>
 
-            </a>
-           <ul>
-                <li>
-                  <a href="cantantes.html">Cantantes confirmados</a>
-                </li>
-                <li>
-                  <a href="galeria.html">Galería</a>
-                </li>
-                <li>
-                  <a href="ventaentradas.html">Venta abonos</a>
-                </li>
+          <button class="menu-toggle" id="menuToggle">
+            <img src="img/hamburguesa.png" alt="Menu" class="menu-icon">
+          </button>
+
+          <ul id="menu-links">
+            <li>
+              <a href="cantantes.html">Cantantes confirmados</a>
+            </li>
+
+            <li>
+              <a href="horarios.html">Horarios</a>
+            </li>
+
+            <li>
+              <a href="galeria.html">Galería</a>
+            </li>
+            <li>
+              <a href="ventaentradas.html">Venta abonos</a>
+            </li>
           </ul>
         </nav>
+
 
         <div class="contenido">
             <h2> ROCANROLA FEST 2026</h2>
@@ -146,23 +156,42 @@
 
 
 
-    <section id="dondenosencontramos">
-        <h2>¿DONDE NOS ENCONTRAMOS?</h2>
+        <section id="dondenosencontramos">
+      <h2>¿DÓNDE NOS ENCONTRAMOS?</h2>
 
-        <div class="ubicacion-container">
-            <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32795.62341579541!2d-5.839495312460131!3d43.434938924295174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd368ec3d98640ef%3A0xa164b792abbde64e!2sAer%C3%B3dromo%20de%20La%20Morgal!5e0!3m2!1ses!2ses!4v1760804108908!5m2!1ses!2ses" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="ubicacion-container">
+        <!-- MAPA -->
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32795.62341579541!2d-5.839495312460131!3d43.434938924295174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd368ec3d98640ef%3A0xa164b792abbde64e!2sAer%C3%B3dromo%20de%20La%20Morgal!5e0!3m2!1ses!2ses!4v1760804108908!5m2!1ses!2ses" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        
-        <!-- INFO -->
+
+        <!-- INFO DE TRANSPORTE -->
         <div class="info-container">
-            <h3>¿Como llegar desde Oviedo?</h3>
-            <ul>
-               <li><strong>Autobús:</strong> Línea ALSA, 45 min, parada Castañera – La Morgal.</li>
-               <li><strong>Tren:</strong> Estación Lugo de Llanera, 12 min, 23 min a pie hasta el aeródromo.</li>
-               <li><strong>Coche:</strong> 21,5 km, 23 min vía A-66 dirección Gijón.</li>
-            </ul>
+          <h3>¿CÓMO LLEGAR DESDE OVIEDO?</h3>
+          <div class="transporte-acordeon">
+            <div class="transporte-item">
+              <button class="transporte-toggle">AUTOBÚS</button>
+              <div class="transporte-info">
+                <p>Línea ALSA desde Oviedo. Duración aproximada: <strong>45 minutos</strong>. Parada: <em>Castañera – La Morgal</em>.</p>
+              </div>
+            </div>
+
+            <div class="transporte-item">
+              <button class="transporte-toggle">TREN</button>
+              <div class="transporte-info">
+                <p>Estación <strong>Lugo de Llanera</strong>. Trayecto: <strong>12 minutos</strong> + <strong>23 minutos a pie</strong> hasta el recinto.</p>
+              </div>
+            </div>
+
+            <div class="transporte-item">
+              <button class="transporte-toggle">COCHE</button>
+              <div class="transporte-info">
+                <p>Desde Oviedo: <strong>21,5 km</strong> por la A-66 dirección Gijón. Tiempo estimado: <strong>23 minutos</strong>.</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <div class="redes-sociales">

@@ -15,25 +15,32 @@
 
 
   <body>
-   <header>
-      <nav id="menu">
-       <!-- logo menú -->
-        <a href="index.html" class="logo">
-          <img src="img/Marca-Rocanrola-2025.webp" alt="logo rocanrola">
+    <nav id="menu" aria-label="Menú principal">
+          <!-- logo menú -->
+          <a href="index.html" class="logo">
+            <img src="img/Marca-Rocanrola-2025.webp" alt="logo rocanrola">
+          </a>
 
-        </a>
-        <ul>
-          <li>
-            <a href="cantantes.html">Cantantes confirmados</a>
+          <button class="menu-toggle" id="menuToggle">
+            <img src="img/hamburguesa.png" alt="Menu" class="menu-icon">
+          </button>
+
+          <ul id="menu-links">
+            <li>
+              <a href="cantantes.html">Cantantes confirmados</a>
             </li>
+            <li>
+              <a href="horarios.html">Horarios</a>
+            </li>
+
             <li>
               <a href="galeria.html">Galería</a>
             </li>
             <li>
               <a href="ventaentradas.html">Venta abonos</a>
             </li>
-        </ul>
-      </nav>
+          </ul>
+        </nav>
     </header>
 
     <section id="lineup">
@@ -815,37 +822,38 @@
        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0SDXCNjTuVcUv5tomjod10?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </section>
     
+  <footer>  
+    <div class="footer-container">
+      <div class="footer-info">
+        <p>© 2025 Festival Rocanrola</p>
+        <p>Aeródromo de La Morgal, Asturias</p>
+        <p>Contacto: <a href="mailto:contacto@rocanrola.com">contacto@rocanrola.com</a></p>
+      </div>
 
+      <div class="footer-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#lineup">Lineup</a>
+        <a href="#entradas">Entradas</a>
+        <a href="#galeria">Galería</a>
+      </div>
 
-    <footer>  
-      <div class="footer-container">
-       <div class="footer-info">
-         <p>© 2025 Festival Rocanrola</p>
-         <p>Aeródromo de La Morgal, Asturias</p>
-         <p>Contacto: <a href="mailto:contacto@rocanrola.com">contacto@rocanrola.com</a></p>
-       </div>
+      <div class="footer-social">
+        <a href="https://facebook.com/rocanrola" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/rocanrola" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com/@rocanrola" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
 
-        <div class="footer-links">
-         <a href="#inicio">Inicio</a>
-         <a href="#lineup">Lineup</a>
-         <a href="#entradas">Entradas</a>
-         <a href="#galeria">Galería</a>
-        </div>
+      <div class="footer-legal">
+        <a href="#">Política de privacidad</a> ·
+        <a href="#">Aviso legal</a> ·
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+          
 
-        <div class="footer-social">
-         <a href="https://facebook.com/rocanrola" target="_blank"><i class="fab fa-facebook-f"></i></a>
-         <a href="https://instagram.com/rocanrola" target="_blank"><i class="fab fa-instagram"></i></a>
-         <a href="https://tiktok.com/@rocanrola" target="_blank"><i class="fab fa-tiktok"></i></a>
-       </div>
-
-       <div class="footer-legal">
-         <a href="#">Política de privacidad</a> ·
-         <a href="#">Aviso legal</a> ·
-         <a href="#">Cookies</a>
-       </div>
-     </div>
     </footer>
 
-<script src="js/script.js"></script>
-</body>
+    
+   <script src="js/script.js"></script>
+  </body>
 </html>

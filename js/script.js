@@ -37,40 +37,50 @@ function actualizarCuentaAtras(){
 const intervalo = setInterval(actualizarCuentaAtras, 1000);
 actualizarCuentaAtras();
 
+// ASi funciona el menu hamburguesa y el carusel sin que se tapen entre ellos
+document.addEventListener("DOMContentLoaded", function () {
+  iniciarMenuHamburguesa();
+  iniciarCarrusel();
+});
 
-// CARRUSEL HOME PAGE
-const track = document.querySelector('.carrousel-track');
-const prevButton = document.querySelector('.carrousel-button.prev');
-const nextButton = document.querySelector('.carrousel-button.next');
-const items = document.querySelectorAll('.carrousel-item');
+function iniciarMenuHamburguesa() {
+  const menuToggle = document.getElementById("menuToggle");
+  const menuLinks = document.querySelector("#menu ul");
 
-let currentIndex = 0;
-const itemWidth = items[0].offsetWidth + 20; 
-const visibleItems = Math.floor(document.querySelector('.carrousel-container').offsetWidth / itemWidth);
-const maxIndex = items.length - visibleItems;
-
-function updateCarousel() {
-  track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+  if (menuToggle && menuLinks) {
+    menuToggle.addEventListener("click", () => {
+      menuLinks.classList.toggle("active");
+    });
+  }
 }
 
-prevButton.addEventListener('click', () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    updateCarousel();
+function iniciarCarrusel() {
+  const items = document.querySelectorAll(".item");
+
+  if (items.length > 0) {
+    const itemWidth = items[0].offsetWidth + 20;
+
+    const container = document.querySelector(".carousel-container");
+    let scrollPosition = 0;
+
+    const arrowRight = document.querySelector(".arrow-right");
+    const arrowLeft = document.querySelector(".arrow-left");
+
+    if (arrowRight && container) {
+      arrowRight.addEventListener("click", () => {
+        scrollPosition += itemWidth;
+        container.scrollTo({ left: scrollPosition, behavior: "smooth" });
+      });
+    }
+
+    if (arrowLeft && container) {
+      arrowLeft.addEventListener("click", () => {
+        scrollPosition -= itemWidth;
+        container.scrollTo({ left: scrollPosition, behavior: "smooth" });
+      });
+    }
   }
-});
-
-nextButton.addEventListener('click', () => {
-  if (currentIndex < maxIndex) {
-    currentIndex++;
-    updateCarousel();
-  }
-});
-
-window.addEventListener('resize', () => {
-  updateCarousel();
-});
-
+}
 // CANTANTES
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -89,6 +99,30 @@ document.addEventListener('DOMContentLoaded', function () {
       modal.style.display = 'none';
     }
   };
+});
+
+
+// HORARIOS
+
+document.addEventListener("DOMContentLoaded", function () {
+  const tabButtons = document.querySelectorAll(".tab-button");
+  const tabContents = document.querySelectorAll(".tab-content");
+
+  tabButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const dia = button.getAttribute("data-dia");
+
+      tabButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      tabContents.forEach(content => {
+        content.classList.remove("active");
+        if (content.id === dia) {
+          content.classList.add("active");
+        }
+      });
+    });
+  });
 });
 
 
@@ -133,6 +167,9 @@ document.addEventListener("DOMContentLoaded", function () {
     inputs.forEach((input) => {
         input.addEventListener("input", calculateTotalPrice);
     });
+    
+
+    
 
     // Evitar envío real del formulario
     form.addEventListener("submit", function (event) {
@@ -145,5 +182,19 @@ document.addEventListener("DOMContentLoaded", function () {
     // Calcular total al iniciar
     calculateTotalPrice();
 });
+
+
+// ABRIR Y CERRAR PESTAÑAS DE COMO LLEGAR
+document.addEventListener("DOMContentLoaded", function () {
+  const toggles = document.querySelectorAll(".transporte-toggle");
+
+  toggles.forEach((toggle) => {
+    toggle.addEventListener("click", function () {
+      const item = this.parentElement;
+      item.classList.toggle("active");
+    });
+  });
+});
+
 
 console.log("Script cargado correctamente");
