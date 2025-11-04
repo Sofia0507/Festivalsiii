@@ -549,7 +549,8 @@ background: linear-gradient(135deg, #A5F557, #000);  padding: 60px 0;
 .carrousel-track {
   display: flex;
   gap: 20px;
-  transition: transform 0.5s ease;
+  overflow-x: auto;
+  scroll-behavior: smooth;
 }
 
 .carrousel-item {
@@ -737,19 +738,35 @@ background: linear-gradient(135deg, #A5F557, #000);  padding: 60px 0;
   height: 100vh;
   background-color: rgba(173, 173, 173, 0.95);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   opacity: 0;
   visibility: hidden;
-  transition-duration: 0.5s;
+  transition: 0.5s;
+  z-index: 1000;
 }
 
+
+.modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal figure {
+  position: relative;
+  z-index: 1001;
+}
 
 a:focus,
 a:active {
   outline: none;
   box-shadow: none;
+}
+
+.modal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 /* para los enlaces que apuntan a modales no salga la linea morada ni negra (para eliminarlo) */

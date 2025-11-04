@@ -54,52 +54,54 @@ function iniciarMenuHamburguesa() {
   }
 }
 
-function iniciarCarrusel() {
-  const items = document.querySelectorAll(".item");
 
-  if (items.length > 0) {
-    const itemWidth = items[0].offsetWidth + 20;
+ 
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector(".carrousel-track");
+    const arrowRight = document.querySelector(".carrousel-button.next");
+    const arrowLeft = document.querySelector(".carrousel-button.prev");
 
-    const container = document.querySelector(".carousel-container");
-    let scrollPosition = 0;
+    if (!container || !arrowRight || !arrowLeft) return;
 
-    const arrowRight = document.querySelector(".arrow-right");
-    const arrowLeft = document.querySelector(".arrow-left");
+    const scrollAmount = container.offsetWidth * 0.8;
 
-    if (arrowRight && container) {
-      arrowRight.addEventListener("click", () => {
-        scrollPosition += itemWidth;
-        container.scrollTo({ left: scrollPosition, behavior: "smooth" });
-      });
-    }
+    // Flechas manuales
+    arrowRight.addEventListener("click", () => {
+      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
 
-    if (arrowLeft && container) {
-      arrowLeft.addEventListener("click", () => {
-        scrollPosition -= itemWidth;
-        container.scrollTo({ left: scrollPosition, behavior: "smooth" });
-      });
-    }
-  }
-}
-// CANTANTES
+    arrowLeft.addEventListener("click", () => {
+      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const modal = document.getElementById('modal');
-  const modalImg = document.getElementById('modal-img');
+    // Autoplay cada 4 segundos
+    let autoplay = setInterval(() => {
+      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
 
-  window.abrirModal = function (imagenSrc) {
-    if (modal && modalImg) {
-      modal.style.display = 'flex';
-      modalImg.src = imagenSrc;
-    }
-  };
+      // Reinicio si llega al final
+      if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 1) {
+        container.scrollTo({ left: 0, behavior: "smooth" });
+      }
+    }, 4000);
 
-  window.cerrarModal = function () {
-    if (modal) {
-      modal.style.display = 'none';
-    }
-  };
-});
+    // Pausar autoplay al hacer hover
+    container.addEventListener("mouseenter", () => clearInterval(autoplay));
+    container.addEventListener("mouseleave", () => {
+      autoplay = setInterval(() => {
+        container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+
+        if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 1) {
+          container.scrollTo({ left: 0, behavior: "smooth" });
+        }
+      }, 4000);
+    });
+  });
+
+
+
+
+
+
 
 
 // HORARIOS
